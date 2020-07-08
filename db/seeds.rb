@@ -61,4 +61,6 @@ puts "seeding pomeranians"
 api.pomeranians
 
 puts "seeding dog ratings"
-DogRating.create(dog_id: Dog.all.sample.id, rating: rand(1..5))
+100.times do
+    DogRating.create(dog_id: Dog.all.sample.id, rating: rand(1..5))
+end
