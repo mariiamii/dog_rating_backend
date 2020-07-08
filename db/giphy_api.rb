@@ -21,7 +21,7 @@ class GiphyApi
     request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=corgi&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
-            Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Corgi").id)
+            Dog.create(image_url: result["images"]["downsized_large"]["url"], breed_id: Breed.find_by(name: "Corgi").id)
         end
     end
 
@@ -29,7 +29,7 @@ class GiphyApi
     request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=husky&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
-            Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Husky").id)
+            Dog.create(image_url: result["images"]["downsized_large"]["url"], breed_id: Breed.find_by(name: "Husky").id)
         end
     end
 
@@ -37,7 +37,7 @@ class GiphyApi
     request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=golden+retriever&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
-            Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Golden Retriever").id)
+            Dog.create(image_url: result["images"]["downsized_large"]["url"], breed_id: Breed.find_by(name: "Golden Retriever").id)
         end
     end
 
@@ -45,7 +45,7 @@ class GiphyApi
     request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=dachsund&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
-            Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Dachshund").id)
+            Dog.create(image_url: result["images"]["downsized_large"]["url"], breed_id: Breed.find_by(name: "Dachshund").id)
         end
     end
 
@@ -53,7 +53,7 @@ class GiphyApi
     request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=french+bulldog&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
-            Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "French Bulldog").id)
+            Dog.create(image_url: result["images"]["downsized_large"]["url"], breed_id: Breed.find_by(name: "French Bulldog").id)
         end
     end
 
@@ -61,7 +61,7 @@ class GiphyApi
     request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=poodle&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
-            Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Poodle").id)
+            Dog.create(image_url: result["images"]["downsized_large"]["url"], breed_id: Breed.find_by(name: "Poodle").id)
         end
     end
 
@@ -69,7 +69,7 @@ class GiphyApi
     request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=australian+shepherd&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
-            Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Australian Shepherd").id)
+            Dog.create(image_url: result["images"]["downsized_large"]["url"], breed_id: Breed.find_by(name: "Australian Shepherd").id)
         end
     end
 
@@ -77,7 +77,7 @@ class GiphyApi
     request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=beagle&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
-            Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Beagle").id)
+            Dog.create(image_url: result["images"]["downsized_large"]["url"], breed_id: Breed.find_by(name: "Beagle").id)
         end
     end
 
@@ -85,7 +85,7 @@ class GiphyApi
     request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=pomeranian&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
-            Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Pomeranian").id)
+            Dog.create(image_url: result["images"]["downsized_large"]["url"], breed_id: Breed.find_by(name: "Pomeranian").id)
         end
     end
 
