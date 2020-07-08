@@ -41,24 +41,24 @@ puts "seeding dogs"
 
 puts "seeding shibas"
 api.shibas
-puts "seeding corgis"
-api.corgis
-puts "seeding huskies"
-api.huskies
-puts "seeding golden retrievers"
-api.goldens
-puts "seeding dachshunds"
-api.dachshunds
-puts "seeding frenchies"
-api.frenchies
-puts "seeding poodles"
-api.poodles
-puts "seeding australians"
-api.australians
-puts "seeding beagles"
-api.beagles
-puts "seeding pomeranians"
-api.pomeranians
+# puts "seeding corgis"
+# api.corgis
+# puts "seeding huskies"
+# api.huskies
+# puts "seeding golden retrievers"
+# api.goldens
+# puts "seeding dachshunds"
+# api.dachshunds
+# puts "seeding frenchies"
+# api.frenchies
+# puts "seeding poodles"
+# api.poodles
+# puts "seeding australians"
+# api.australians
+# puts "seeding beagles"
+# api.beagles
+# puts "seeding pomeranians"
+# api.pomeranians
 
 puts "seeding dog ratings"
 100.times do

@@ -12,7 +12,8 @@ class GiphyApi
     request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=shiba&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
-            Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Shiba").id)
+            # byebug
+            Dog.create(image_url: result["images"]["downsized_large"]["url"], breed_id: Breed.find_by(name: "Shiba").id)
         end
     end
 
