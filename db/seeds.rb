@@ -32,13 +32,33 @@ Dog.destroy_all
 puts "destroying dog ratings"
 DogRating.destroy_all
 
-puts "seeding breed"
+puts "seeding breeds"
 breeds.each do |breed| 
     Breed.create(name: breed)
 end
 
-puts "seeding dog"
+puts "seeding dogs"
+
+puts "seeding shibas"
 api.shibas
-# Dog.create(breed_id: Breed.all.sample.id, image_url: "https://s3.amazonaws.com/cdn-origin-etr.akc.org/wp-content/uploads/2017/11/26114717/Shiba-Inu-puppy-standing-outdoors.jpg")
-puts "seeding dog rating"
+puts "seeding corgis"
+api.corgis
+puts "seeding huskies"
+api.huskies
+puts "seeding golden retrievers"
+api.goldens
+puts "seeding dachshunds"
+api.dachshunds
+puts "seeding frenchies"
+api.frenchies
+puts "seeding poodles"
+api.poodles
+puts "seeding australians"
+api.australians
+puts "seeding beagles"
+api.beagles
+puts "seeding pomeranians"
+api.pomeranians
+
+puts "seeding dog ratings"
 DogRating.create(dog_id: Dog.all.sample.id, rating: rand(1..5))
