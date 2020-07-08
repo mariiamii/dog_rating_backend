@@ -9,7 +9,7 @@ class GiphyApi
     API_PARTIAL_URL = "api_key=#{ENV['GIPHY_API_KEY']}"
 
     def shibas
-    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=shiba&limit=10").to_json
+    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=shiba&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
             Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Shiba").id)
@@ -17,7 +17,7 @@ class GiphyApi
     end
 
     def corgis
-    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=corgi&limit=10").to_json
+    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=corgi&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
             Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Corgi").id)
@@ -25,7 +25,7 @@ class GiphyApi
     end
 
     def huskies
-    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=husky&limit=10").to_json
+    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=husky&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
             Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Husky").id)
@@ -33,7 +33,7 @@ class GiphyApi
     end
 
     def goldens
-    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=golden+retriever&limit=10").to_json
+    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=golden+retriever&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
             Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Golden Retriever").id)
@@ -41,7 +41,7 @@ class GiphyApi
     end
 
     def dachshunds
-    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=dachsund&limit=10").to_json
+    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=dachsund&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
             Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Dachshund").id)
@@ -49,7 +49,7 @@ class GiphyApi
     end
 
     def frenchies
-    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=french+bulldog&limit=10").to_json
+    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=french+bulldog&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
             Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "French Bulldog").id)
@@ -57,7 +57,7 @@ class GiphyApi
     end
 
     def poodles
-    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=poodle&limit=10").to_json
+    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=poodle&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
             Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Poodle").id)
@@ -65,7 +65,7 @@ class GiphyApi
     end
 
     def australians
-    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=australian+shepherd&limit=10").to_json
+    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=australian+shepherd&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
             Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Australian Shepherd").id)
@@ -73,7 +73,7 @@ class GiphyApi
     end
 
     def beagles
-    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=beagle&limit=10").to_json
+    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=beagle&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
             Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Beagle").id)
@@ -81,7 +81,7 @@ class GiphyApi
     end
 
     def pomeranians
-    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=pomeranian&limit=10").to_json
+    request = HTTParty.get(BASE_URL+API_PARTIAL_URL+"&q=pomeranian&limit=2").to_json
     @request_hash = JSON.parse(request)
         @request_hash["data"].each do |result|
             Dog.create(image_url: result["url"], breed_id: Breed.find_by(name: "Pomeranian").id)
