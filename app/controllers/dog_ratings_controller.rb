@@ -13,6 +13,6 @@ class DogRatingsController < ApplicationController
     private
 
     def rating_params
-        params.permit(:rating)
+        params.permit(:rating, :dog_id)
     end
 end
