@@ -1,6 +1,6 @@
 class DogsController < ApplicationController
     def index
-        @dogs = Dog.all 
+        @dogs = Dog.all.sample(20)
         render json: @dogs 
     end
 
